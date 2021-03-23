@@ -23,4 +23,8 @@
     </testsuite>
   </testsuites>
 
+  <logging>
+    <junit outputFile="./tests/results/sentence-scoring.xml"/>
+  </logging>
+
 </phpunit>
