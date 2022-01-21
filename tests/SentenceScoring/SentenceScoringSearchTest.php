@@ -88,6 +88,8 @@ class SentenceScoringSearchTest extends TestCase
 			'substrings' => [],
 		];
 		foreach ($words as $row) {
+            $this->assertIsArray($row);
+
 			$word = new Word($row[0], $row[1], $row[2]);
 
 			$result['byCat'][$word->getCategory()][$word->getWord()] = $word;
@@ -139,6 +141,7 @@ class SentenceScoringSearchTest extends TestCase
 
 		foreach ($resultWords as $category => $resultCategoryWords) {
 			$presenceList = $search->findWordsInCategory($category);
+            $this->assertIsArray($resultCategoryWords);
 			$this->assertCount(
 				count($resultCategoryWords), $presenceList,
 				'Wrong found words count of category \'' . $category . '\'!'
