@@ -112,7 +112,7 @@ class Search implements ISearch
 					ISentenceScoringService::CATEGORY_1),
 				ISentenceScoringService::CATEGORY_2 => new ScoringCategoryCalculator($optimizer, $this->dictionary,
 					ISentenceScoringService::CATEGORY_2),
-				ISentenceScoringService::CATEGORY_3 => new ScoringCategoryCleanupCalculator(clone $optimizer,
+				ISentenceScoringService::CATEGORY_3 => new ScoringCategoryCleanupCalculator($optimizer,
 					$this->dictionary, ISentenceScoringService::CATEGORY_3),
 				ISentenceScoringService::CATEGORY_4 => new ScoringCategoryCalculator($optimizer, $this->dictionary,
 					ISentenceScoringService::CATEGORY_4),

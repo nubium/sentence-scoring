@@ -12,7 +12,7 @@ use Nubium\SentenceScoring\Edge\Search\ISearchFactory;
 class ScoringService implements ISentenceScoringService
 {
 	/** @internal */
-	const VERSION = 8;
+	const VERSION = 9;
 
 	protected ISearchFactory $searchFactory;
 
